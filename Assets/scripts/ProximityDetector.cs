@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ProximityDetector : MonoBehaviour
 {
-    MeshRenderer ballRenderer;
+   
     new Light light;
 
     private void Start()
     {
-        ballRenderer = GetComponent<MeshRenderer>();
+        
         light = GetComponentInChildren<Light>();
 
-        ballRenderer.enabled = false;
+        
         light.enabled = false;
     }
 
@@ -20,7 +20,7 @@ public class ProximityDetector : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            ballRenderer.enabled = true;
+            
             light.enabled = true;
         }
     }
@@ -29,7 +29,7 @@ public class ProximityDetector : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            ballRenderer.enabled = false;
+            
             light.enabled = false;
         }
     }
